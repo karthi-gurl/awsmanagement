@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Karthika's Portfolio</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    body{
+      background: linear-gradient(135deg,#c8b6ff,#9bf6ff,#a0c4ff);
+      color:#222;
+      line-height:1.6;
+    }
+    .container{
+      width:90%;
+      max-width:1100px;
+      margin:auto;
+      padding:40px 0;
+    }
+    .hero{
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(10px);
+      border-radius:20px;
+      padding:50px;
+      text-align:center;
+      box-shadow:0 8px 20px rgba(0,0,0,0.1);
+      margin-bottom:30px;
+    }
+
+    .hero h1{
+      font-size:48px;
+      color:#3b3b98;
+      margin-bottom:10px;
+    }
+
+    .hero h3{
+      font-size:22px;
+      color:#444;
+      margin-bottom:20px;
+    }
+    .hero p{
+      max-width:750px;
+      margin:auto;
+      font-size:17px;
+    }
+    .contact{
+      margin-top:25px;
+    }
+    .contact a{
+      text-decoration:none;
+      color:#222;
+      margin:0 12px;
+      font-weight:bold;
+    }
+    .section{
+      background: rgba(255,255,255,0.25);
+      padding:35px;
+      border-radius:20px;
+      margin-bottom:25px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    }
+    .section h2{
+      color:#4b0082;
+      margin-bottom:20px;
+      font-size:30px;
+      border-bottom:2px solid #6c63ff;
+      display:inline-block;
+      padding-bottom:5px;
+    }
+    .skills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:15px;
+      margin-top:15px;
+    }
+    .skill-box{
+      background:white;
+      padding:12px 18px;
+      border-radius:30px;
+      font-size:15px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.08);
+    }
+   .project{
+      background:white;
+      padding:20px;
+      border-radius:15px;
+      margin-top:20px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.08);
+    }
+    .project h3{
+      color:#3b3b98;
+      margin-bottom:10px;
+    }
+    ul{
+      margin-left:20px;
+    }
+    footer{
+      text-align:center;
+      padding:20px;
+      color:#333;
+      font-weight:bold;
+    }
+    @media(max-width:768px){
+      .hero{
+        padding:30px;
+      }
+      .hero h1{
+        font-size:35px;
+      }
+      .section{
+        padding:25px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="hero">
+      <h1>Karthika R</h1>
+      <h3>Python Developer</h3>
+      <p>
+    Heyy,Hi! I’m a Computer Science and Engineering student with a strong foundation in C, Python, and web technologies. Passionate about building efficient, scalable applications, I enjoy solving real-world problems, learning emerging technologies, and creating innovative software solutions.
+      </p>
+      <div class="contact">
+        <a href="mailto:karthikaravikumar222@gmail.com">Email</a>
+        <a href="tel:9342644296">Phone</a>
+        <a href="https://www.linkedin.com/in/karthika-ravikumar-978a95323" target="_blank">
+          LinkedIn
+        </a>
+      </div>
+    </div>
+    <!-- ================= SKILLS SECTION ================= -->
+<div class="section">
+    <h2>Skills</h2>
+
+    <div class="skill-buttons">
+        <button class="tab-btn active" onclick="showSkills('programming', this)">
+            Programming Languages
+        </button>
+
+        <button class="tab-btn" onclick="showSkills('web', this)">
+            Web Technologies
+        </button>
+
+        <button class="tab-btn" onclick="showSkills('tools', this)">
+            Developer Tools & Frameworks
+        </button>
+
+        <button class="tab-btn" onclick="showSkills('database', this)">
+            Database
+        </button>
+
+        <button class="tab-btn" onclick="showSkills('concepts', this)">
+            Core Concepts
+        </button>
+    </div>
+
+    <!-- Programming Languages -->
+    <div id="programming" class="skill-content active-content">
+        <div class="skills">
+            <div class="skill-box">C</div>
+            <div class="skill-box">Python</div>
+        </div>
+    </div>
+
+    <!-- Web Technologies -->
+    <div id="web" class="skill-content">
+        <div class="skills">
+            <div class="skill-box">HTML</div>
+            <div class="skill-box">CSS</div>
+            <div class="skill-box">PHP</div>
+        </div>
+    </div>
+
+    <!-- Developer Tools -->
+    <div id="tools" class="skill-content">
+        <div class="skills">
+            <div class="skill-box">VS Code</div>
+            <div class="skill-box">Git</div>
+            <div class="skill-box">Docker</div>
+            <div class="skill-box">Django</div>
+        </div>
+    </div>
+
+    <!-- Database -->
+    <div id="database" class="skill-content">
+        <div class="skills">
+            <div class="skill-box">SQL</div>
+            <div class="skill-box">MongoDB</div>
+        </div>
+    </div>
+
+    <!-- Core Concepts -->
+    <div id="concepts" class="skill-content">
+        <div class="skills">
+            <div class="skill-box">Data Structures & Algorithms</div>
+            <div class="skill-box">Object-Oriented Programming</div>
+        </div>
+    </div>
+</div>
+
+<style>
+
+/*==================== SKILLS ====================*/
+
+.skill-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+    margin:25px 0;
+}
+
+.tab-btn{
+    background:white;
+    color:#4b0082;
+    border:none;
+    padding:12px 22px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:bold;
+    transition:.3s;
+    box-shadow:0 4px 10px rgba(0,0,0,.08);
+}
+
+.tab-btn:hover{
+    background:#6c63ff;
+    color:white;
+    transform:translateY(-3px);
+}
+
+.tab-btn.active{
+    background:#6c63ff;
+    color:white;
+}
+
+.skill-content{
+    display:none;
+    animation:fade .4s ease;
+}
+
+.active-content{
+    display:block;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+    margin-top:20px;
+}
+
+.skill-box{
+    background:white;
+    padding:12px 20px;
+    border-radius:30px;
+    box-shadow:0 4px 10px rgba(0,0,0,.08);
+    transition:.3s;
+    font-weight:600;
+}
+
+.skill-box:hover{
+    background:#6c63ff;
+    color:white;
+    transform:scale(1.05);
+}
+
+@media(max-width:768px){
+
+.skill-buttons{
+    flex-direction:column;
+    align-items:center;
+}
+
+.tab-btn{
+    width:100%;
+    max-width:320px;
+}
+
+}
+
+</style>
+
+<script>
+
+function showSkills(id, btn){
+
+    // Hide all skill contents
+    document.querySelectorAll(".skill-content").forEach(function(content){
+        content.classList.remove("active-content");
+    });
+
+    // Remove active class from buttons
+    document.querySelectorAll(".tab-btn").forEach(function(button){
+        button.classList.remove("active");
+    });
+
+    // Show selected content
+    document.getElementById(id).classList.add("active-content");
+
+    // Highlight selected button
+    btn.classList.add("active");
+}
+
+</script>   
+<div class="section">
+      <h2>Education</h2>
+      <p>
+        <strong>B.E Computer Science and Engineering</strong><br>
+        Chettinad College of Engineering and Technology, Karur<br>
+        CGPA: 8.3 (Up to 6th Semester) | 2023 - Present
+      </p>
+      <br>
+      <p>
+        <strong>HSC</strong><br>
+        Sri Karunairagavaji Vidhyalaya Nursery & Higher Secondary School, Karur<br>
+        Percentage: 82.17% | 2023
+      </p>
+    </div>
+    <div class="section">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>Inventory Management System</h3>
+        <p>
+          Developed an Inventory Management System to manage product details, 
+          stock records, and inventory data. The system allows users to add, 
+          update, delete, and view product information through a simple user interface.
+        </p>
+        <br>
+        </div>
+      <div class="project">
+        <h3>Care and Carry Hub</h3>
+        <p>
+          Developed a donation website called Care and Carry Hub to help people 
+          donate clothes, toys, food, and other useful items to poor and needy 
+          people through NGO organizations. The system provides a simple and 
+          secure platform for managing donations and helping communities.
+        </p>
+       <br>
+       </div>
+      <div class="project">
+        <h3>Online Shopping System</h3>
+        <p>Designed the user interface in Figma and developed a Java-based online shopping system implementing product, cart, and order management, leveraging object-oriented programming principles to build a modular, maintainable, and user-centric e-commerce application.
+        </p>
+       </div>
+       </div>
+   <div class="section">
+      <h2>Certifications</h2>
+      <ul>
+        <li>Microsoft Azure – Microsoft Elevate</li>
+        <li>Spring & Spring Boot Web Services – Infosys Springboard</li>
+        <li>NPTEL Programming in Java – Elite Gold (92%)</li>
+        <li>User Experience – IBM SkillsBuild</li>
+      </ul>
+    </div>
+    <footer>
+      © 2026 Karthika R | Portfolio Website
+    </footer>
+  </div>
+</body>
+</html>
