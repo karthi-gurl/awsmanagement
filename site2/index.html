@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Deepayogesh Portfolio</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:#000;
+            color:#fff;
+            line-height:1.6;
+        }
+
+        html{
+            scroll-behavior:smooth;
+        }
+
+        /* NAVBAR */
+
+        nav{
+            width:100%;
+            padding:20px 10%;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            border-bottom:1px solid #333;
+            position:sticky;
+            top:0;
+            background:#000;
+        }
+
+        nav h1{
+            font-size:24px;
+            letter-spacing:2px;
+        }
+
+        nav ul{
+            display:flex;
+            list-style:none;
+            gap:25px;
+        }
+
+        nav ul li a{
+            text-decoration:none;
+            color:#fff;
+            transition:0.3s;
+        }
+
+        nav ul li a:hover{
+            color:#999;
+        }
+
+        /* HERO SECTION */
+
+        .hero{
+            height:100vh;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            padding:20px;
+        }
+
+        .hero h2{
+            font-size:65px;
+            letter-spacing:3px;
+        }
+
+        .hero p{
+            margin-top:20px;
+            width:70%;
+            color:#ccc;
+            font-size:20px;
+        }
+
+        .btn{
+            margin-top:30px;
+            padding:12px 30px;
+            border:1px solid #fff;
+            color:#fff;
+            text-decoration:none;
+            transition:0.3s;
+        }
+
+        .btn:hover{
+            background:#fff;
+            color:#000;
+        }
+
+        /* SECTIONS */
+
+        section{
+            padding:80px 10%;
+            border-top:1px solid #222;
+        }
+
+        section h2{
+            font-size:38px;
+            margin-bottom:30px;
+            text-transform:uppercase;
+            letter-spacing:2px;
+        }
+
+        /* ABOUT */
+
+        .about p{
+            font-size:18px;
+            color:#ccc;
+        }
+
+        /* CARDS */
+
+        .grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:25px;
+        }
+
+        .card{
+            border:1px solid #444;
+            padding:25px;
+            transition:0.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-5px);
+            border-color:#fff;
+        }
+
+        .card h3{
+            margin-bottom:15px;
+            font-size:22px;
+        }
+
+        .card p{
+            color:#ccc;
+        }
+
+        /* EDUCATION */
+
+        .education-box{
+            border-left:3px solid #fff;
+            padding-left:20px;
+            margin-bottom:30px;
+        }
+
+        .education-box h3{
+            margin-bottom:10px;
+        }
+
+        .education-box p{
+            color:#ccc;
+        }
+
+        /* CERTIFICATIONS */
+
+        .certifications ul{
+            padding-left:20px;
+        }
+
+        .certifications li{
+            margin-bottom:15px;
+            color:#ccc;
+        }
+
+        /* CONTACT */
+
+        .contact{
+            text-align:center;
+        }
+
+        .contact p{
+            margin:12px 0;
+            color:#ccc;
+            font-size:18px;
+        }
+
+        .contact a{
+            color:#fff;
+            text-decoration:none;
+            border-bottom:1px solid #fff;
+        }
+
+        .contact a:hover{
+            color:#999;
+        }
+
+        /* FOOTER */
+
+        footer{
+            text-align:center;
+            padding:20px;
+            border-top:1px solid #222;
+            color:#777;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:768px){
+
+            nav{
+                flex-direction:column;
+                gap:15px;
+            }
+
+            nav ul{
+                flex-wrap:wrap;
+                justify-content:center;
+            }
+
+            .hero h2{
+                font-size:40px;
+            }
+
+            .hero p{
+                width:95%;
+                font-size:17px;
+            }
+
+            section h2{
+                font-size:30px;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <h1>PORTFOLIO</h1>
+
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certificates</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </nav>
+
+    <!-- HERO SECTION -->
+
+    <div class="hero">
+
+        <h2>DEEPAYOGESH K</h2>
+
+        <p>
+            Computer Science Engineering Student |
+            UI/UX Designer |
+            Frontend Developer
+        </p>
+
+        <a href="#about" class="btn">View Portfolio</a>
+
+    </div>
+
+    <!-- ABOUT -->
+
+    <section id="about" class="about">
+
+        <h2>About Me</h2>
+
+        <p>
+            Motivated Computer Science Engineering student with a strong interest
+            in UI/UX Design and Frontend Development. Familiar with wireframing,
+            prototyping, responsive design, and creating user-friendly interfaces
+            using modern design tools.
+        </p>
+
+    </section>
+
+    <!-- SKILLS -->
+
+    <section id="skills">
+
+        <h2>Skills & Tools</h2>
+
+        <div class="grid">
+
+            <div class="card">
+
+                <h3>Skills</h3>
+
+                <p>
+                    UI/UX Design<br>
+                    Prototyping<br>
+                    Typography<br>
+                    Web Design<br>
+                    Color Theory
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Tools</h3>
+
+                <p>
+                    Figma<br>
+                    Canva<br>
+                    Adobe XD<br>
+                    Framer<br>
+                    ProtoPie
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- EDUCATION -->
+
+    <section id="education">
+
+        <h2>Education</h2>
+
+        <div class="education-box">
+
+            <h3>B.E Computer Science and Engineering</h3>
+
+            <p>
+                Chettinad College of Engineering and Technology, Karur<br>
+                2023 - Present<br>
+                CGPA : 7.7
+            </p>
+
+        </div>
+
+        <div class="education-box">
+
+            <h3>Higher Secondary Education</h3>
+
+            <p>
+                Little Scholars Matriculation Higher Secondary School,
+                Thanjavur<br>
+                Year : 2023<br>
+                Percentage : 70%
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- PROJECTS -->
+
+    <section id="projects">
+
+        <h2>Projects</h2>
+
+        <div class="grid">
+
+            <div class="card">
+
+                <h3>E-Book Management System</h3>
+
+                <p>
+                    Developed a backend-based library management system
+                    using Java and Spring Boot with MySQL integration
+                    for managing books and student records.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Rental Billing System</h3>
+
+                <p>
+                    Created a scalable rental billing system using
+                    Spring Boot with automated bill generation and
+                    future voice-assistant integration.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CERTIFICATIONS -->
+
+    <section id="certifications" class="certifications">
+
+        <h2>Certifications</h2>
+
+        <ul>
+
+            <li>Microsoft Azure - Microsoft Elevate</li>
+
+            <li>Back-End Development with Node.JS - IBM</li>
+
+            <li>User Experience - IBM SkillsBuild</li>
+
+            <li>Basics of UI/UX Design - UniAthena</li>
+
+            <li>Spring & Spring Boot Web Services - Infosys Springboard</li>
+
+        </ul>
+
+    </section>
+
+    <!-- CONTACT -->
+
+    <section id="contact" class="contact">
+
+        <h2>Contact</h2>
+
+        <p>Email : deepayogeshh@gmail.com</p>
+
+        <p>Phone : +91 8248732936</p>
+
+        <p>Location : Karur, Tamil Nadu</p>
+
+        <p>
+            LinkedIn :
+            <a href="https://www.linkedin.com/in/deepayogesh-k-72756a348/"
+               target="_blank">
+               linkedin.com/in/deepayogesh-k-72756a348
+            </a>
+        </p>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026 Deepayogesh K | Portfolio Website
+
+    </footer>
+
+</body>
+</html>
